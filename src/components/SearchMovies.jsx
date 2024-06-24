@@ -31,16 +31,14 @@ const SearchMovies = (props) => {
     console.log(movieBox);
     
     const movies = AllMovies(movieBox);
-    return movies;
+    return (movies.length > 0 ? movies : <Empty />)
   }
   
   return (
     <header className="container">
     <Suspense fallback={<Spinner />}>
       <Await resolve={deferredMovies}>
-        {
-          renderMovies.lenght > 0 ? renderMovies : <Empty />
-        }
+        {renderMovies}
       </Await>
     </Suspense>
     </header>
