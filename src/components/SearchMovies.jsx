@@ -29,9 +29,9 @@ const SearchMovies = (props) => {
       ...loadedMovies[1].results
     ]
     console.log(movieBox);
-    
+    if (movieBox.length > 0) return <Empty />;
     const movies = AllMovies(movieBox);
-    return (movies.length > 0 ? movies : <Empty />)
+    return movies;
   }
   
   return (
