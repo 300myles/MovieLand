@@ -63,9 +63,12 @@ export async function movieData (mid) {
 }
 
 export async function searchMovies (search, page) {
-  const query = search.map(character => {
-    return(character === "" ? "%20" : character)
-  })
+  let query = search;
+  if (search.length > 1 {
+     query = search.map(character => {
+      return(character === "" ? "%20" : character)
+    })
+  }
   const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}&page=${page}`;
 
   try {
