@@ -64,7 +64,7 @@ export async function movieData (mid) {
 
 export async function searchMovies (search, page) {
   let query = search;
-  if (search.length > 1 {
+  if (search.length > 1) {
      query = search.map(character => {
       return(character === "" ? "%20" : character)
     })
