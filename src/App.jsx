@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {
   RouterProvider,
   createBrowserRouter,
@@ -13,7 +12,6 @@ import Search from "./pages/Search";
 import "./styles/App.css";
 import NotFound from "./pages/NotFound";
 
-const  SearchIcon = "./images/search.svg";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route>
