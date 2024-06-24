@@ -38,7 +38,9 @@ const SearchMovies = (props) => {
     <header className="container">
     <Suspense fallback={<Spinner />}>
       <Await resolve={deferredMovies}>
-        {renderMovies}
+        {
+          renderMovies.lenght > 0 ? renderMovies : <Empty />
+        }
       </Await>
     </Suspense>
     </header>
