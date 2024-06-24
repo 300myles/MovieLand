@@ -63,7 +63,10 @@ export async function movieData (mid) {
 }
 
 export async function searchMovies (search, page) {
-  const url = `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=${API_KEY}&page=${page}`;
+  const query = search.map(character => {
+    return(character === "" ? "%20" : character)
+  })
+  const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}&page=${page}`;
 
   try {
      const res = await fetch(url);
