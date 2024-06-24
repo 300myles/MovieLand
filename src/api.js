@@ -1,6 +1,6 @@
 
 
-const API_KEY = '1d5b80f4a2cdafc3280ef64abf5de7a7'
+const API_KEY = '1d5b80f4a2cdafc3280ef64abf5de7a7';
 
 async function sleep (ms) {
   let count = localStorage.getItem("sleep-count");
@@ -65,9 +65,11 @@ export async function movieData (mid) {
 export async function searchMovies (search, page) {
   let query = search;
   if (search.length > 1) {
-     query = search.map(character => {
+    const toArray = search.split("");
+    const mappedQuery = toArray.map(character => {
       return(character === "" ? "%20" : character)
-    })
+    });
+    query = mappedQuery.join("");
   }
   const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${API_KEY}&page=${page}`;
 
