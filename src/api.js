@@ -24,7 +24,7 @@ export async function trendingMovies (page) {
   await sleep(500);
   try {
      const res = await fetch(`https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=${API_KEY}&page=${page}`);
-    return res.json
+    return res.json();
   } catch (err) {
      console.log(err);
     throw new Error("Faild to generate movies")
@@ -55,7 +55,7 @@ export async function movieData (mid) {
   const url = `https://api.themoviedb.org/3/movie/${mid}?api_key=1d5b80f4a2cdafc3280ef64abf5de7a7`;
   try {
      const res = await fetch(url);
-    return res.json
+    return res.json();
   } catch (error) {
      throw new Error("Failed to generate movies")
   }
