@@ -10,6 +10,7 @@ import { loader as allMoviesLoader } from "./components/GetMovies";
 import { loader as movieLoader } from "./pages/Movie";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import Movie from "./pages/Movie";
 import "./styles/App.css";
 import NotFound from "./pages/NotFound";
 
