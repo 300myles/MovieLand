@@ -1,7 +1,5 @@
 import React, { Suspense } from "react";
 import { 
-  useParams, 
-  NavLink, 
   useLoaderData, 
   defer, 
   Await
