@@ -43,8 +43,6 @@ const SearchMovies = (props) => {
       console.log(error)
       return <Error />;
     } 
-    const movies = AllMovies(movieBox);
-    return movies;
   }
   
   return (
