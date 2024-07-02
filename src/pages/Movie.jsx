@@ -21,6 +21,7 @@ function renderMovie (movie) {
     <img 
       className="movie-thumbnail" 
       src={poster_path !== "N/A" ? (IMG_PATH + poster_path) : "https://via.placeholder.com/400"} 
+      alt={movie.title || movie.name}
     />
   );
 
