@@ -49,3 +49,11 @@ export async function auth (request) {
       </div>
     )
  }
+
+export const Error = () => {
+   return (
+      <div className="empty">
+          <h2>Error loading movies</h2>
+      </div>
+    )
+ }
