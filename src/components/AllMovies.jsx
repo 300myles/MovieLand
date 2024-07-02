@@ -12,8 +12,8 @@ const AllMovies = (moviesBOX) => {
         poster_path, 
         media_type
       } = movie;
-      const releaseDate = movie.release_date;
-      const year = releaseDate.slice(0, 4);
+      //const releaseDate = movie.release_date;
+      const year = movie.release_date;
       
       return (
         <Link 
