@@ -6,7 +6,7 @@ import {
 import Spinner from "./Spinner";
 import { searchMovies } from "../api.js";
 import AllMovies from "./AllMovies";
-import { Empty } from "./utilities";
+import { Empty, Error } from "./utilities";
 
 function getMovies (search) {
   const turnOut1 = searchMovies(search, 1);
@@ -36,6 +36,13 @@ const SearchMovies = (props) => {
     }
  
     if (movieBox.length === 0) return <Empty />;
+    try {
+      const movies = AllMovies(movieBox);
+      return movies;
+    } catch (error) {
+      console.log(error)
+      return <Error />;
+    } 
     const movies = AllMovies(movieBox);
     return movies;
   }
