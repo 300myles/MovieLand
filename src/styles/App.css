@@ -278,21 +278,18 @@ header.container {
 }
 
 #moviepage {
-  display: flex;
-  position: fixed;
-  overflow: hidden auto;
-  flex-direction: column;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
-  border: 1px solid #FFF;
+  overflow: hidden auto;
 }
 
 .movie-image {
+  width: 100%;
+  height: 25%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  align-content: center;
   margin-top: 30px;
 }
 
