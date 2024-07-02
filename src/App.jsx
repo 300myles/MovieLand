@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Error from "./pages/Error";
 import { loader as allMoviesLoader } from "./components/GetMovies";
+import { loader as movieLoader } from "./pages/Movie";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import "./styles/App.css";
@@ -26,6 +27,13 @@ const router = createBrowserRouter(createRoutesFromElements(
         path="/search"
         errorElement={<Error />}
         element={<Search />}
+      />
+      
+      <Route 
+        path="/:movie"
+        loader={movieLoader}
+        errorElement={<Error />}
+        element={<Movie />}
       />
       
       <Route
