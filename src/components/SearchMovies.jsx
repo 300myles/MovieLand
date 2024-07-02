@@ -23,12 +23,18 @@ const SearchMovies = (props) => {
 
   //console.log(deferredMovies);
   const renderMovies = (loadedMovies) => {
-
-    const movieBox = [
-      ...loadedMovies[0].results, 
-      ...loadedMovies[1].results
-    ]
-    console.log(movieBox);
+    
+    let movieBox = null;
+    
+    if (loadedMovies[0].pages > 1) {
+      movieBox = [
+        ...loadedMovies[0].results, 
+        ...loadedMovies[1].results
+      ];
+    } else {
+      movieBox = loadedMovies[0].results;
+    }
+ 
     if (movieBox.length === 0) return <Empty />;
     const movies = AllMovies(movieBox);
     return movies;
