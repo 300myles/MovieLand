@@ -7,7 +7,7 @@ import {
   Await
 } from "react-router-dom";
 import { movieData } from "../api.js";
-import Spinner from "..components/Spinner";
+import Spinner from "../components/Spinner";
 
 export async function loader ({ params, request }) {
   const id = new URL(request.url).searchParams.get("id");
